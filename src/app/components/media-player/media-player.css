@@ -1,0 +1,70 @@
+.media-player {
+  width: 400px;
+  margin: auto;
+  font-family: Arial;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+li.active {
+  font-weight: bold;
+  color: blue;
+}
+audio {
+  display: block;
+  margin: 10px auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+
+.audio-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 12px;
+  gap: 10px;
+  border: solid 2px #9c100e;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Aplica o hover ao container */
+.audio-container:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  /* margin-top: -2px;  */ /* opcional */
+}
+
+
+.audio-container audio {
+  flex: 1; /* Faz o audio ocupar o máximo possível de espaço */
+}
+
+.control-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #dcdcdc; /* mesma cor ou diferente, se preferir destaque */
+  border-radius: 6px;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background-color: #c0c0c0;
+}
+
+
+

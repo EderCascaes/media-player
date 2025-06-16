@@ -1,0 +1,23 @@
+<div class="media-player">
+  <h2>Playlist</h2>
+  <ul>
+    <li *ngFor="let music of playlist; let i = index"
+        (click)="playMusic(i)"
+        [class.active]="i === currentIndex">
+      {{ music.name }}
+    </li>
+  </ul>
+<div class="audio-container">
+  <audio
+    #audio
+    [src]="currentMusic?.src"
+    (ended)="nextMusic()"
+    (timeupdate)="updateTime(audio)"
+    (loadedmetadata)="setDuration(audio)"
+    controls>
+  </audio>
+
+  <p class="control-button" (click)="previousMusic()">⏮</p>
+  <p class="control-button" (click)="nextMusic()">⏭</p>
+</div>
+</div>
