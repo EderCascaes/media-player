@@ -33,8 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/assets/musics
-/assets/videos
+
 # System Files
 .DS_Store
 Thumbs.db

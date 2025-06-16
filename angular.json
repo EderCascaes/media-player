@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "mediaPlayer"
+  "defaultProject": "mediaPlayer",
+  "cli": {
+    "analytics": "1eb55d64-1b06-4f2e-8f1b-f0c66e33d493"
+  }
 }
