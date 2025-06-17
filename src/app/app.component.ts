@@ -14,13 +14,13 @@ import { SafeResourceUrl } from '@angular/platform-browser';
 export class AppComponent implements OnInit {
 playlist: { name: string; src: string | SafeResourceUrl }[] = [];
 
-title = 'mediaPlayer';
+title = 'Media Player ';
 
 ngOnInit(): void {
   this.playlist = [
-    { name: 'Música 1', src: 'assets/musics/Dilsinho - Diferentão (Ao Vivo).mp3' },
-    { name: 'Música 2', src: 'assets/musics/Dilsinho - Péssimo Negócio (DVD Terra do Nunca Ao Vivo).mp3' },
-    { name: 'Música 3', src: 'assets/musics/Dilsinho - Sou Pagodeiro (Love Yourself) (Ao Vivo).mp3' }
+    { name: 'Diferentão', src: 'assets/musics/Dilsinho - Diferentão (Ao Vivo).mp3' },
+    { name: 'Péssimo Negócio', src: 'assets/musics/Dilsinho - Péssimo Negócio (DVD Terra do Nunca Ao Vivo).mp3' },
+    { name: 'Sou Pagodeiro', src: 'assets/musics/Dilsinho - Sou Pagodeiro (Love Yourself) (Ao Vivo).mp3' }
   ];
   
 }
