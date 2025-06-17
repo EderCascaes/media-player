@@ -1,10 +1,11 @@
 <div class="media-player">
-  <h2>Playlist</h2>
-  <ul>
+  <h2 class="playlist-title">P l a y  =>  l i s t</h2>
+  <ul class="music-list">
     <li *ngFor="let music of playlist; let i = index"
         (click)="playMusic(i)"
-        [class.active]="i === currentIndex">
+        [class.active]="i === currentIndex"> 
       {{ music.name }}
+      <hr>
     </li>
   </ul>
 

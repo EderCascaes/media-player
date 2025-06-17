@@ -1,7 +1,12 @@
 .media-player {
+  background-color: #c0c0c0;
   width: 400px;
   margin: auto;
   font-family: Arial;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 ul {
@@ -40,6 +45,7 @@ audio {
   gap: 10px;
   border: solid 2px #9c100e;
   transition: box-shadow 0.3s ease;
+  margin:10px ;
 }
 
 /* Aplica o hover ao container */
@@ -56,7 +62,7 @@ audio {
 .control-button {
   cursor: pointer;
   padding: 5px 10px;
-  background-color: #dcdcdc; /* mesma cor ou diferente, se preferir destaque */
+  background-color: #dcdcdc;
   border-radius: 6px;
   user-select: none;
   transition: background-color 0.3s;
@@ -68,3 +74,16 @@ audio {
 
 
 
+.playlist-title {
+  color: red; /* Letras vermelhas */
+  font-family: 'Constantia', sans-serif; /* Você pode trocar por qualquer fonte desejada */
+  font-size: 24px; /* Opcional: ajustar o tamanho da fonte */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.music-list{
+  background-color: #ded3d3;
+  border-radius: 10px;
+  border: solid 2px #9c100e;
+}
