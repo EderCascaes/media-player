@@ -54,9 +54,22 @@
   cursor: pointer;
   user-select: none;
   transition: transform 0.2s;
+  margin-bottom: 5px;
 }
 
 .control-button:hover {
   transform: scale(1.2);
   color: #1db954;
+}
+.clear-button {
+  margin-left: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.clear-button:hover {
+  background-color: #c82333;
 }

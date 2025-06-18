@@ -25,8 +25,13 @@ ngOnInit(): void {
   
 }
 
-  adicionarNaPlaylist(musica: { name: string; src: string | SafeResourceUrl }) {
+adicionarNaPlaylist(musica: { name: string; src: string | SafeResourceUrl }) {
   this.playlist = [...this.playlist, musica];
 }
+
+limparPlaylistNoPai() {
+  this.playlist = [];
+}
+
 
 }

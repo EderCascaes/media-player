@@ -9,7 +9,11 @@
 
   <div class="music-player">
       <app-upload-music (musicaSelecionada)="adicionarNaPlaylist($event)"></app-upload-music>
-      <app-media-player [playlist]="playlist"></app-media-player>
+      <app-media-player
+          [playlist]="playlist"
+          (limparSolicitado)="limparPlaylistNoPai()">
+     </app-media-player>
+
   </div>
 </div>
 
