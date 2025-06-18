@@ -18,6 +18,23 @@ export class MediaPlayer implements OnChanges {
     }
   }
 
+  onFolderSelected(event: Event): void {
+  const input = event.target as HTMLInputElement;
+  if (input.files && input.files.length > 0) {
+    const files = Array.from(input.files);
+    files.forEach(file => {
+      const url = URL.createObjectURL(file);
+      const safeUrl = url; // se quiser sanitizar: this.sanitizer.bypassSecurityTrustResourceUrl(url)
+      this.playlist.push({ name: file.name, src: safeUrl });
+    });
+
+    // Toca a primeira música adicionada, se nenhuma estiver tocando ainda
+    if (!this.currentMusic) {
+      this.playMusic(this.currentIndex);
+    }
+  }
+}
+
   playMusic(index: number) {
     this.currentIndex = index;
     this.currentMusic = this.playlist[index];

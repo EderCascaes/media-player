@@ -1,89 +1,62 @@
 .media-player {
-  background-color: #c0c0c0;
-  width: 400px;
-  margin: auto;
-  font-family: Arial;
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-ul {
+.playlist-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.music-list {
   list-style: none;
   padding: 0;
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-li {
+.music-list li {
+  padding: 10px;
   cursor: pointer;
-  padding: 5px;
+  border-bottom: 1px solid #444;
+  transition: background 0.3s;
 }
 
-li.active {
+.music-list li:hover {
+  background: #333;
+}
+
+.music-list li.active {
+  background: #444;
   font-weight: bold;
-  color: blue;
 }
-audio {
-  display: block;
-  margin: 10px auto;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 5px;
-}
-
 
 .audio-container {
   display: flex;
   align-items: center;
-  background-color: #f0f0f0;
+  justify-content: space-around;
+  background: #2e2e2e;
   padding: 10px;
-  border-radius: 12px;
-  gap: 10px;
-  border: solid 2px #9c100e;
-  transition: box-shadow 0.3s ease;
-  margin:10px ;
-}
-
-/* Aplica o hover ao container */
-.audio-container:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  /* margin-top: -2px;  */ /* opcional */
-}
-
-
-.audio-container audio {
-  flex: 1; /* Faz o audio ocupar o máximo possível de espaço */
+  border-radius: 10px;
 }
 
 .control-button {
+  font-size: 28px;
   cursor: pointer;
-  padding: 5px 10px;
-  background-color: #dcdcdc;
-  border-radius: 6px;
   user-select: none;
-  transition: background-color 0.3s;
+  transition: transform 0.2s;
 }
 
 .control-button:hover {
-  background-color: #c0c0c0;
-}
-
-
-
-.playlist-title {
-  color: red; /* Letras vermelhas */
-  font-family: 'Constantia', sans-serif; /* Você pode trocar por qualquer fonte desejada */
-  font-size: 24px; /* Opcional: ajustar o tamanho da fonte */
-  margin-top: 10px;
-  text-align: center;
-}
-
-.music-list{
-  background-color: #ded3d3;
-  border-radius: 10px;
-  border: solid 2px #9c100e;
+  transform: scale(1.2);
+  color: #1db954;
 }

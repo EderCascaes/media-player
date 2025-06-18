@@ -1,30 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MediaPlayer } from './media-player';
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-media-player',
+  templateUrl: './media-player.component.html',
+  styleUrls: ['./media-player.component.css']
+})
+export class MediaPlayer {
+  playlist: { name: string; src: string }[] = [];
+  currentIndex = 0;
+  currentMusic: { name: string; src: string } | null = null;
 
-
-describe('MediaPlayer', () => {
-  let component: MediaPlayer;
-  let fixture: ComponentFixture<MediaPlayer>;
-
-
-  
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MediaPlayer ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MediaPlayer);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-
-
+}

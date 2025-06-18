@@ -1,5 +1,16 @@
 <div class="media-player">
-  <h2 class="playlist-title">P l a y  =>  l i s t</h2>
+ <!-- media-player.component.html -->
+  <button (click)="folderInput.click()">Selecionar Pasta</button>
+  <input 
+    #folderInput 
+    type="file" 
+    (change)="onFolderSelected($event)" 
+    webkitdirectory 
+    multiple 
+    hidden>
+
+
+  <h2 class="playlist-title">P l a y  ==>  l i s t</h2>
   <ul class="music-list">
     <li *ngFor="let music of playlist; let i = index"
         (click)="playMusic(i)"
